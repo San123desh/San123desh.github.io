@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.topnav{
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+.cover{
+    width:100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./pexels-photo.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.topnav a
+{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.5s;
+}
+.topnav a:hover{
+    background-color: #ddd;
+    color: white;
+}
+.topnav a.active{
+    background-color: #2196F3;
+    color: white;
+}
+.topnav .search{
+    float: right;
+}
+.topnav input[type=text]
+{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+.topnav .search button{
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right:16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.topnav .search button:hover{
+    background: #ccc;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    color: teal;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: 0.6s;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    /* background: #009688; */
+    /* color: white; */
+    border: none;
+}
+
+@media screen and (max-width:600px) {
+    .topnav .search{
+        float: none;
+    }
+    .topnav a,.topnav input[type=text],.topnav .search button{
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text]
+    {
+        border: 1px solid #ccc;
+    }   
+}
